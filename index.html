@@ -2,57 +2,61 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Todo App</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaskFlow - Simple Todo App</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-<div class="app">
+<div class="container">
 
-    <!-- HEADER -->
-    <div class="header">
-        <h1><span>todo</span>list</h1>
+<nav>
+    <div class="logo">TaskFlow</div>
+    <div>
+        <a href="home.html">goto app</a>
+    </div>
+</nav>
 
-        <div class="status">
-            <div class="circle">✔</div>
-            <span id="count">0</span>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Organize your tasks effortlessly</h1>
+        <p>Stay productive and manage your daily tasks with a clean and simple todo app.</p>
+        
+        <button class="btn"><a href="home.html">Get Started</a></button>
+    </div>
+
+    <div class="hero-img">
+        <p>✔ Add Tasks<br>✔ Track Progress<br>✔ Stay Focused</p>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <h2>Features</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Easy to Use</h3>
+            <p>Simple and intuitive interface for everyone.</p>
+        </div>
+        <div class="card">
+            <h3>Track Progress</h3>
+            <p>Mark tasks as completed and stay organized.</p>
+        </div>
+        <div class="card">
+            <h3>Fast & Lightweight</h3>
+            <p>Optimized for speed and performance.</p>
         </div>
     </div>
+</section>
 
-    <!-- INPUT + SEARCH -->
-    <div class="top-bar">
-        <div class="input-box">
-            <input type="text" id="taskInput" placeholder="Add task...">
-            <button onclick="addTask()">+</button>
-        </div>
-
-        <input type="text" id="search" placeholder="🔍 search tasks">
-    </div>
-
-    <!-- TABS -->
-    <div class="tabs">
-        <button class="active" onclick="showTab('tasks')">📋 tasks</button>
-        <button onclick="showTab('completed')">✅ completed</button>
-    </div>
-
-    <!-- TASKS -->
-    <div id="tasksTab" class="tab-content">
-        <h3>active tasks <span id="taskCount">0</span></h3>
-        <br><br>
-        <div id="taskList"></div>
-    </div>
-
-    <!-- COMPLETED -->
-    <div id="completedTab" class="tab-content hidden">
-        <h3>completed tasks</h3>
-        <br><br>
-        <div id="completedList"></div>
-        <button class="clear-btn" onclick="clearCompleted()">✖ clear completed</button>
-    </div>
+<footer>
+    <p>© 2026 TaskFlow. All rights reserved.</p>
+</footer>
 
 </div>
 
-<script src="script.js"></script>
 </body>
 </html>

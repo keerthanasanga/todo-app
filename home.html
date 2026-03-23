@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Todo App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1><span>todo</span>list</h1>
+
+        <div class="status">
+            <div class="circle">✔</div>
+            <span id="count">0</span>
+        </div>
+    </div>
+
+    <!-- INPUT + SEARCH -->
+    <div class="top-bar">
+        <div class="input-box">
+            <input type="text" id="taskInput" placeholder="Add task...">
+            <button onclick="addTask()">+</button>
+        </div>
+
+        <input type="text" id="search" placeholder="🔍 search tasks">
+    </div>
+
+    <!-- TABS -->
+    <div class="tabs">
+        <button class="active" onclick="showTab('tasks')">📋 tasks</button>
+        <button onclick="showTab('completed')">✅ completed</button>
+    </div>
+
+    <!-- TASKS -->
+    <div id="tasksTab" class="tab-content">
+        <h3>active tasks <span id="taskCount">0</span></h3>
+        <br><br>
+        <div id="taskList"></div>
+    </div>
+
+    <!-- COMPLETED -->
+    <div id="completedTab" class="tab-content hidden">
+        <h3>completed tasks</h3>
+        <br><br>
+        <div id="completedList"></div>
+        <button class="clear-btn" onclick="clearCompleted()">✖ clear completed</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
